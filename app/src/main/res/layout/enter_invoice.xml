@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF35393D">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+<!--The structure of this layout file has a TextView in each row followed by an EditText to the
+right of each TextView. THe edit text takes in the users input and adds it to the database through
+the use of the Add Invoice button.-->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:touchscreenBlocksFocus="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                style="@style/AppText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/companyTextViewt"
+                android:layout_column="0"
+                android:layout_marginBottom="10dp"
+                android:singleLine="true"
+                android:text="@string/invoice_title_name" />
+
+            <EditText
+                style="@style/AppText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/companyEditText"
+                android:hint="@string/invoice_company_name_hint"
+                android:textColorHint="@color/hintText"
+                android:layout_column="1"
+                android:layout_marginLeft="50dp"
+                android:inputType="text" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                style="@style/AppText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/invoice_title_date"
+                android:id="@+id/textView3"
+                android:layout_column="0"
+                android:layout_marginBottom="10dp" />
+
+            <EditText
+                style="@style/AppText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:ems="10"
+                android:id="@+id/paidDateEditText"
+                android:hint="@string/invoice_Date_hint"
+                android:textColorHint="@color/hintText"
+                android:layout_column="1"
+                android:layout_marginLeft="50dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                style="@style/AppText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/invoice_title_number"
+                android:id="@+id/textView4"
+                android:layout_column="0"
+                android:layout_marginBottom="10dp" />
+
+            <EditText
+                style="@style/AppText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/invoiceNumberEditText"
+                android:hint="@string/invoice_number_hint"
+                android:textColorHint="@color/hintText"
+                android:layout_column="1"
+                android:layout_marginLeft="50dp"
+                android:inputType="text" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/AppText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView5"
+                android:text="@string/invoice_title_paid"
+                android:layout_marginBottom="10dp" />
+
+            <EditText
+                style="@style/AppText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/amountPaidEditText"
+                android:hint="@string/invoice_amount_hint"
+                android:textColorHint="@color/hintText"
+                android:layout_marginLeft="50dp"
+                android:layout_column="1" />
+        </TableRow>
+    </TableLayout>
+
+    <!-- The below layouts are used to organize the three main buttons in the file. There is an add
+    invoice button, remove invoice button, and View All Invoices button. The Add invoice adds all
+    the user entered text fields to the database in an organized fashion based off the arguments
+    layed out in the InvoiceList.java class. -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center_vertical|center_horizontal">
+
+        <Button
+            style="@style/AppText"
+            android:background="@drawable/buttonshape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_invoice_button_text"
+            android:textAllCaps="false"
+            android:id="@+id/addInvoiceButton"
+            android:layout_marginRight="5dp" />
+
+        <!--This button has no functionality at this time but will in the future.-->
+        <Button
+            style="@style/AppText"
+            android:background="@drawable/buttonshape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/remove_invoice_button_text"
+            android:textAllCaps="false"
+            android:id="@+id/button2"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <Button
+            style="@style/AppText"
+            android:background="@drawable/buttonshape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/viewAllInvoices"
+            android:textAllCaps="false"
+            android:id="@+id/viewAllInvoicesButton"
+            android:onClick="SwitchToAllInvoiceView"/>
+    </LinearLayout>
+
+</LinearLayout>

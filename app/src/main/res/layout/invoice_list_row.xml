@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <!--This layout file is used to design each row within the all invoices list view.-->
+
+    <!--Line 1 of List View Data-->
+    <TextView
+        style="@style/AppText"
+        android:id="@+id/companyTitle"
+        android:text="@string/companyTitle"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        style="@style/AppText"
+        android:id="@+id/rowCompanyName"
+        android:layout_alignTop="@+id/companyTitle"
+        android:layout_toEndOf="@+id/invoiceNumberTitle"
+        android:layout_marginStart="50dp" />
+
+    <!--Line 2 of ListView data-->
+    <TextView
+        style="@style/AppText"
+        android:id="@+id/paidDateTitle"
+        android:text="@string/datePaidTitle"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@id/rowCompanyName"/>
+
+    <TextView
+        style="@style/AppText"
+        android:id="@+id/rowPaidDate"
+        android:layout_alignTop="@+id/paidDateTitle"
+        android:layout_toEndOf="@+id/invoiceNumberTitle"
+        android:layout_marginStart="50dp"/>
+
+    <!--Line 3 of ListView data-->
+    <TextView
+        style="@style/AppText"
+        android:id="@+id/amountPaidTitle"
+        android:text="@string/amountPaidTitle"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@id/rowPaidDate"/>
+
+    <TextView
+        style="@style/AppText"
+        android:id="@+id/rowAmountPaid"
+        android:layout_alignTop="@+id/amountPaidTitle"
+        android:layout_toEndOf="@+id/invoiceNumberTitle"
+        android:layout_marginStart="50dp"/>
+
+    <!--Line 4 of ListView data-->
+    <TextView
+        style="@style/AppText"
+        android:id="@+id/invoiceNumberTitle"
+        android:text="@string/invoiceNumberTitle"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@id/rowAmountPaid"/>
+
+    <TextView
+        style="@style/AppText"
+        android:id="@+id/rowInvoiceNumber"
+        android:layout_alignTop="@+id/invoiceNumberTitle"
+        android:layout_toEndOf="@+id/invoiceNumberTitle"
+        android:layout_marginStart="50dp"/>
+
+
+
+
+</RelativeLayout>

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cuginimotorsports.cs683_project">
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+
 
     <application
         android:allowBackup="true"
@@ -14,7 +17,27 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <!--Each of the below activities was created in order to use the Buttons to invoke
+            new activities-->
         </activity>
+
+        <activity android:name=".CalendarHome">
+
+        </activity>
+
+        <activity android:name=".InvoiceHome">
+
+        </activity>
+
+        <activity android:name=".EnterInvoice">
+
+        </activity>
+
+        <activity android:name=".invoiceList">
+
+        </activity>
+
     </application>
 
 </manifest>

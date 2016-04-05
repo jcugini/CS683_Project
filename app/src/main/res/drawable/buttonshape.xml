@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+
+    <!--discovered these methods here: http://developer.android.com/guide/topics/resources/drawable-resource.html-->
+    <!--This drawable xml file was created to create the shape and color of my Buttons used throughout the app-->
+
+    <solid android:color="@color/buttonColor"/>
+
+    <size
+        android:width="180dp"
+        android:height="50dp"/>
+
+</shape>
