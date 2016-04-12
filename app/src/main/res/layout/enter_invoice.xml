@@ -150,7 +150,7 @@ the use of the Add Invoice button.-->
             android:layout_height="wrap_content"
             android:text="@string/remove_invoice_button_text"
             android:textAllCaps="false"
-            android:id="@+id/button2"/>
+            android:id="@+id/removeInvoiceButton"/>
     </LinearLayout>
 
     <LinearLayout

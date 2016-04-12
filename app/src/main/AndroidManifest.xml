@@ -11,7 +11,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,19 +23,23 @@
             new activities-->
         </activity>
 
-        <activity android:name=".CalendarHome">
+        <activity android:name=".CalendarHome"
+            android:screenOrientation="portrait">
 
         </activity>
 
-        <activity android:name=".InvoiceHome">
+        <activity android:name=".InvoiceHome"
+            android:screenOrientation="portrait">
 
         </activity>
 
-        <activity android:name=".EnterInvoice">
+        <activity android:name=".EnterInvoice"
+            android:screenOrientation="portrait">
 
         </activity>
 
-        <activity android:name=".invoiceList">
+        <activity android:name=".invoiceList"
+            android:screenOrientation="portrait">
 
         </activity>
 

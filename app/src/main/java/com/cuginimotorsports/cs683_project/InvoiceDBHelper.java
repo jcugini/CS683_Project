@@ -38,6 +38,7 @@ public class InvoiceDBHelper extends SQLiteOpenHelper {
     //Creates a table with the table specs implemented in "Table_specs"
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(Table_Specs);
+        onCreate(db);
     }
 
     //This method drops the table if it exists so that errors aren't thrown if a column is added
@@ -47,6 +48,7 @@ public class InvoiceDBHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS" + Invoice_Table);
         onCreate(db);
     }
+
 
     //Adds data values to the sqlite database using the get methods laid out in the InvoiceHome.java
     //class. The values are then inserted into the database table.
@@ -64,6 +66,7 @@ public class InvoiceDBHelper extends SQLiteOpenHelper {
 
         db.close();
     }
+
 
     public ArrayList<InvoiceHome> getAllInvoices() {
 
@@ -88,4 +91,9 @@ public class InvoiceDBHelper extends SQLiteOpenHelper {
 
         return allInvoices;
     }
+
+    /*public void deleteRow(String name) {
+        SQLiteDatabase db = getWritableDatabase();
+        db.delete(Invoice_Table, Primary_Key + "=?", new String[]{name});
+    }*/
 }

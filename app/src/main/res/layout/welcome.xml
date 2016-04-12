@@ -22,8 +22,7 @@
             android:background="@drawable/buttonshape"
             android:text="@string/calendar_home_button"
             android:textAllCaps="false"
-            android:id="@+id/welcomeScreenButton"
-            android:onClick="SwitchToCalendarView"/>
+            android:id="@+id/enterCalendarScreenButton"/>
 
     </LinearLayout>
 
@@ -44,8 +43,7 @@
             android:layout_height="wrap_content"
             android:text="@string/invoices"
             android:textAllCaps="false"
-            android:id="@+id/enterInvoiceScreenButton"
-            android:onClick="SwitchToInvoiceView"/>
+            android:id="@+id/enterInvoiceScreenButton"/>
 
     </LinearLayout>
 

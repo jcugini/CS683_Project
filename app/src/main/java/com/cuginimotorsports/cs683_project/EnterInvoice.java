@@ -19,6 +19,7 @@ public class EnterInvoice extends AppCompatActivity {
     private Button addInvoice;
     private InvoiceDBHelper dbh;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +39,7 @@ public class EnterInvoice extends AppCompatActivity {
         //saves the above information to the databse by clicking the "add invoice" button
         addInvoice.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 saveToDB();
             }
         });
@@ -80,4 +81,5 @@ public class EnterInvoice extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
 }

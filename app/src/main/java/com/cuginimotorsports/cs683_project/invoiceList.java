@@ -31,7 +31,7 @@ public class invoiceList extends AppCompatActivity{
         setContentView(R.layout.invoice_list);
 
         listView = (ListView) findViewById(R.id.invoiceList);
-
+        registerForContextMenu(listView);
         refreshData();
     }
 
