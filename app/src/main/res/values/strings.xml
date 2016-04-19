@@ -27,7 +27,16 @@
     <string name="viewAllInvoices">View All Invoices</string>
     <string name="add_invoice_button_text">Add Invoice</string>
     <string name="remove_invoice_button_text">Remove Invoice</string>
-    <string name="menu_small_font">Small Font</string>
-    <string name="menu_medium_font">Medium Font</string>
-    <string name="menu_default_font">Default Font</string>
+    <string name="Add_Invoice_Menu">Add Invoice</string>
+    <string name="WelcomeButton">Begin</string>
+    <string name="Remove_Invoice_Menu">Remove Invoice</string>
+    <string name="click_to_delete">Click to Delete</string>
+    <string name="DeleteInvoiceHint">Enter Invoice Number..</string>
+    <string name="detailCompanyTitle">Company:</string>
+    <string name="detailDatePaidTitle">Date Paid:</string>
+    <string name="detailPaidAmountTitle">Amound paid:</string>
+    <string name="detailInvoiceNumberTitle">Invoice Number:</string>
+    <string name="detailMessage">Invoice Details:</string>
+    <string name="menuMainAddBill">Add Reminder</string>
+    <string name="menuMainViewCalendar">View Calendar</string>
 </resources>

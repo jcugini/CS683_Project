@@ -1,51 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/testLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/linearLayout"
-        android:layout_marginBottom="123dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true">
-
-        <!-- The below button conains an onClick method that points to the method
-        SwitchToCalendarView which invokes the CalendarHome.java class. -->
-        <Button
-            style="@style/AppText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/buttonshape"
-            android:text="@string/calendar_home_button"
-            android:textAllCaps="false"
-            android:id="@+id/enterCalendarScreenButton"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/linearLayout2"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="46dp">
-
-        <!-- The below button conains an onClick method that points to the method
-        SwitchToInvoiceView which invokes the EnterInvoice.java class. -->
-        <Button
-            style="@style/AppText"
-            android:background="@drawable/buttonshape"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/invoices"
-            android:textAllCaps="false"
-            android:id="@+id/enterInvoiceScreenButton"/>
-
-    </LinearLayout>
 
     <LinearLayout
         android:orientation="vertical"
@@ -63,5 +21,16 @@
             android:text="@string/welcome_message"
             android:id="@+id/textView6" />
     </LinearLayout>
+
+    <Button
+        style="@style/AppText"
+        android:background="@drawable/buttonshape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/WelcomeButton"
+        android:textAllCaps="false"
+        android:id="@+id/enterApp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

@@ -1,12 +1,18 @@
 package com.cuginimotorsports.cs683_project;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -24,6 +30,25 @@ public class invoiceList extends AppCompatActivity{
     private ArrayList<InvoiceHome> dbInvoices = new ArrayList<>();
     private InvoiceAdapter invoiceAdapter;
     private ListView listView;
+    private TextView resultText;
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.invoice_menu, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected (MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.Add_Invoice:
+                final Intent intentForSwitchEnterInvoice =
+                        new Intent(this, EnterInvoice.class);
+                startActivity(intentForSwitchEnterInvoice);
+                return true;
+
+            default: return super.onOptionsItemSelected(item);
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +58,7 @@ public class invoiceList extends AppCompatActivity{
         listView = (ListView) findViewById(R.id.invoiceList);
         registerForContextMenu(listView);
         refreshData();
+
     }
 
     private void refreshData() {
@@ -124,6 +150,27 @@ public class invoiceList extends AppCompatActivity{
             holder.datePaid.setText(holder.myInvoice.getPaidDate());
             holder.paid.setText(holder.myInvoice.getAmountPaid());
             holder.invoiceNumber.setText(holder.myInvoice.getInvoiceNumber());
+
+            //Adding for Click Event in listView item
+            final ViewHolder finalHolder = holder;
+            holder.company.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String companyText = finalHolder.myInvoice.getCompanyName().toString();
+                    String datePaidText = finalHolder.myInvoice.getPaidDate().toString();
+                    String paidText = finalHolder.myInvoice.getAmountPaid().toString();
+                    String invoiceNumberText = finalHolder.myInvoice.getInvoiceNumber().toString();
+
+
+                    Intent i = new Intent(invoiceList.this, InvoiceDetailView.class);
+                    i.putExtra("company", companyText);
+                    i.putExtra("datePaid", datePaidText);
+                    i.putExtra("paid", paidText);
+                    i.putExtra("id", invoiceNumberText);
+
+                    startActivity(i);
+                }
+            });
 
             return row;
         }

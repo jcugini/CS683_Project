@@ -18,10 +18,12 @@ public class InvoiceHome extends AppCompatActivity {
     public String PaidDate;
     public String AmountPaid;
     public String InvoiceNumber;
+    public int InvoiceId;
 
-    public String getCompanyName() {
-        return CompanyName;
-    }
+    public int getInvoiceId() {return InvoiceId;}
+    public void setInvoiceId(int InvoiceId) {this.InvoiceId = InvoiceId;}
+
+    public String getCompanyName() {return CompanyName;}
     public void setCompanyName(String CompanyName) {this.CompanyName = CompanyName;}
 
     public String getPaidDate() {
@@ -29,15 +31,14 @@ public class InvoiceHome extends AppCompatActivity {
     }
     public void setPaidDate(String PaidDate) {this.PaidDate = PaidDate;}
 
-    public String getAmountPaid() {
-        return AmountPaid;
-    }
+    public String getAmountPaid() {return AmountPaid;}
     public void setAmountPaid(String AmountPaid) {this.AmountPaid = AmountPaid;}
 
-    public String getInvoiceNumber() {
+    public String getInvoiceNumber () {
         return InvoiceNumber;
     }
     public void setInvoiceNumber(String InvoiceNumber) {this.InvoiceNumber = InvoiceNumber;}
+
 
 }
 

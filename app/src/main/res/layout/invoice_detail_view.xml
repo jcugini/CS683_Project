@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <!--Page Message-->
+    <TextView
+        style="@style/AppText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/detailMessage"
+        android:id="@+id/detailMessage"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+    <!--Line 1 TextViews-->
+    <TextView
+        style="@style/AppText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/detailCompanyTitle"
+        android:id="@+id/detailCompanyTitle"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/detailMessage"
+        android:layout_toStartOf="@+id/detailMessage"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        style="@style/AppText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test"
+        android:id="@+id/detailCompanyName"
+        android:layout_alignTop="@+id/detailCompanyTitle"
+        android:layout_toEndOf="@+id/detailInvoiceNumberTitle"
+        android:layout_marginLeft="20dp" />
+
+    <!--Line 2 TextViews-->
+    <TextView
+        style="@style/AppText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/detailDatePaidTitle"
+        android:id="@+id/detailDatePaidTitle"
+        android:layout_below="@+id/detailCompanyTitle"
+        android:layout_alignStart="@+id/detailCompanyTitle"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        style="@style/AppText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test2"
+        android:id="@+id/detailPaidDate"
+        android:layout_alignTop="@+id/detailDatePaidTitle"
+        android:layout_alignStart="@+id/detailCompanyName" />
+
+    <!--Line 3 Text Views-->
+    <TextView
+        style="@style/AppText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/detailPaidAmountTitle"
+        android:id="@+id/detailPaidAmountTitle"
+        android:layout_below="@+id/detailDatePaidTitle"
+        android:layout_alignStart="@+id/detailDatePaidTitle"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        style="@style/AppText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test 3"
+        android:id="@+id/detailAmountPaid"
+        android:layout_alignTop="@+id/detailPaidAmountTitle"
+        android:layout_alignStart="@+id/detailPaidDate" />
+
+<!--Line 4 Text Viws-->
+    <TextView
+        style="@style/AppText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/detailInvoiceNumberTitle"
+        android:id="@+id/detailInvoiceNumberTitle"
+        android:layout_below="@+id/detailPaidAmountTitle"
+        android:layout_alignStart="@+id/detailPaidAmountTitle"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        style="@style/AppText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test 4"
+        android:id="@+id/detailInvoiceNumber"
+        android:layout_alignTop="@+id/detailInvoiceNumberTitle"
+        android:layout_alignStart="@+id/detailAmountPaid" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:id="@+id/DeleteButton"
+        android:layout_below="@+id/detailInvoiceNumberTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp" />
+
+</RelativeLayout>

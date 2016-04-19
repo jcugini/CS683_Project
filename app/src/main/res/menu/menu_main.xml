@@ -8,29 +8,13 @@
     re-create the menu options. I added a few list items as layed out in Mod2 but they do not have
     any functionality yet.-->
 
-        <item android:id="@+id/FontSize"
-            android:title="@string/menu_font_size"
-            android:orderInCategory="1"
-            app:showAsAction="never">
+    <item android:id="@+id/addBillReminder"
+        android:title="@string/menuMainAddBill"
+        android:orderInCategory="1"
+        app:showAsAction="never"/>
 
-            <menu>
-                <group android:id="@+id/group2" android:checkableBehavior="single">
-                <item android:id="@+id/Menu_small_font"
-                    android:title="@string/menu_small_font"
-                    android:orderInCategory="1"
-                    app:showAsAction="never"/>
-                <item android:id="@+id/Menu_medium_font"
-                    android:title="@string/menu_medium_font"
-                    android:orderInCategory="2"/>
-                <item android:id="@+id/Menu_default_font"
-                    android:title="@string/menu_default_font"
-                    android:orderInCategory="3"/>
-                </group>
-            </menu>
-    </item>
-
-    <item android:id="@+id/menu_help"
-        android:title="@string/menu_help"
+    <item android:id="@+id/ViewCalendar"
+        android:title="@string/menuMainViewCalendar"
         android:orderInCategory="2"
         app:showAsAction="never" />
 </menu>

@@ -166,8 +166,7 @@ the use of the Add Invoice button.-->
             android:layout_height="wrap_content"
             android:text="@string/viewAllInvoices"
             android:textAllCaps="false"
-            android:id="@+id/viewAllInvoicesButton"
-            android:onClick="SwitchToAllInvoiceView"/>
+            android:id="@+id/viewAllInvoicesButton"/>
     </LinearLayout>
 
 </LinearLayout>

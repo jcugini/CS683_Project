@@ -7,7 +7,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.SearchView;
 import android.widget.Toast;
+
+import java.sql.SQLDataException;
 
 public class EnterInvoice extends AppCompatActivity {
 
@@ -19,11 +23,21 @@ public class EnterInvoice extends AppCompatActivity {
     private Button addInvoice;
     private InvoiceDBHelper dbh;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.enter_invoice);
+
+        //Created a button to switch to the invoiceList java class view to view all items in the
+        //list view.
+        Button switchToAllInvoices = (Button)findViewById(R.id.viewAllInvoicesButton);
+        final Intent intentForAllInvoices =
+                new Intent(this, invoiceList.class);
+        switchToAllInvoices.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(intentForAllInvoices);
+            }
+        });
 
         //calls the InvoiceDBHelper java class to enter an invoice into the database.
         dbh = new InvoiceDBHelper(EnterInvoice.this);
@@ -40,26 +54,26 @@ public class EnterInvoice extends AppCompatActivity {
         addInvoice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                saveToDB();
+                    saveToDB();
             }
         });
-
 
     }
 
     //creates the Toast String implemented below to show that the invoice was added
-    private void toast(String aToast) {
+    public void toast(String aToast) {
         Toast.makeText(getApplicationContext(), aToast, Toast.LENGTH_SHORT).show();
     }
 
     //this is the method used to add invoices to the database in the method above.
     private void saveToDB() {
         //pulls the data from the declared variables and makes them into a string.
-        InvoiceHome invoice = new InvoiceHome();
-        invoice.setCompanyName(companyName.getText().toString().trim());
-        invoice.setPaidDate(paidDate.getText().toString().trim());
-        invoice.setInvoiceNumber(invoiceNumber.getText().toString().trim());
-        invoice.setAmountPaid(amountPaid.getText().toString().trim());
+
+            InvoiceHome invoice = new InvoiceHome();
+            invoice.setCompanyName(companyName.getText().toString().trim());
+            invoice.setPaidDate(paidDate.getText().toString().trim());
+            invoice.setInvoiceNumber(invoiceNumber.getText().toString().trim());
+            invoice.setAmountPaid(amountPaid.getText().toString().trim());
 
         //adds the invoices to the data
         dbh.addInvoices(invoice);
@@ -70,16 +84,9 @@ public class EnterInvoice extends AppCompatActivity {
         invoiceNumber.setText("");
         amountPaid.setText("");
 
-        toast("Successfully Added Invoice");
-    }
-
-    //method used on button "Show All Invoices" used to switch to java class invoiceList. This
-    //displays the listView created in invoice_list.
-    public void SwitchToAllInvoiceView(View view){
-        Intent intent = new Intent(getApplicationContext(),
-                invoiceList.class);
-        startActivity(intent);
-        finish();
+        //This toast method displays the selected methods used in InvoiceDbHelper definted in the
+        //getError method.
+        toast(dbh.getAddInvoiceError());
     }
 
 }
