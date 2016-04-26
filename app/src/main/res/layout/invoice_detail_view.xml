@@ -75,7 +75,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/detailAmountPaid"
         android:layout_alignTop="@+id/detailPaidAmountTitle"
-        android:layout_alignStart="@+id/detailPaidDate" />
+        android:layout_alignStart="@+id/detailPaidDate"
+        android:inputType="numberDecimal"/>
 
 <!--Line 4 Text Views-->
     <TextView
