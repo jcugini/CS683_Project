@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--This is the layout file for the Enter_Invoice class. -->
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF35393D">
+    android:background="@color/colorPrimary">
 
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
 <!--The structure of this layout file has a TextView in each row followed by an EditText to the
-right of each TextView. THe edit text takes in the users input and adds it to the database through
+right of each TextView. The edit text takes in the users input and adds it to the database through
 the use of the Add Invoice button.-->
         <TableRow
             android:layout_width="match_parent"
@@ -22,18 +26,18 @@ the use of the Add Invoice button.-->
                 style="@style/AppText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/companyTextViewt"
+                android:id="@+id/enter_invoice_CompanyViewTitle"
                 android:layout_column="0"
                 android:layout_marginBottom="10dp"
                 android:singleLine="true"
-                android:text="@string/invoice_title_name" />
+                android:text="@string/enter_invoice_InvoiceCompanyName" />
 
             <EditText
                 style="@style/AppText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/companyEditText"
-                android:hint="@string/invoice_company_name_hint"
+                android:id="@+id/enter_invoice_CompanyEditText"
+                android:hint="@string/enter_invoice_CompanyNameHint"
                 android:textColorHint="@color/hintText"
                 android:layout_column="1"
                 android:layout_marginLeft="50dp"
@@ -49,8 +53,8 @@ the use of the Add Invoice button.-->
                 style="@style/AppText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/invoice_title_date"
-                android:id="@+id/textView3"
+                android:text="@string/enter_invoice_DatePaid"
+                android:id="@+id/enter_invoice_PaidDateTitle"
                 android:layout_column="0"
                 android:layout_marginBottom="10dp" />
 
@@ -58,13 +62,14 @@ the use of the Add Invoice button.-->
                 style="@style/AppText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="date"
                 android:ems="10"
-                android:id="@+id/paidDateEditText"
-                android:hint="@string/invoice_Date_hint"
+                android:id="@+id/enter_invoice_PaidDateEditText"
+                android:hint="@string/enter_invoice_DateHint"
                 android:textColorHint="@color/hintText"
                 android:layout_column="1"
-                android:layout_marginLeft="50dp" />
+                android:layout_marginLeft="50dp"
+                android:focusable="false"
+                android:inputType="date"/>
 
         </TableRow>
 
@@ -77,8 +82,8 @@ the use of the Add Invoice button.-->
                 style="@style/AppText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/invoice_title_number"
-                android:id="@+id/textView4"
+                android:text="@string/enter_invoice_InvoiceNumber"
+                android:id="@+id/enter_invoice_InvoiceNumberTitle"
                 android:layout_column="0"
                 android:layout_marginBottom="10dp" />
 
@@ -86,12 +91,12 @@ the use of the Add Invoice button.-->
                 style="@style/AppText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/invoiceNumberEditText"
-                android:hint="@string/invoice_number_hint"
+                android:id="@+id/enter_invoice_InvoiceNumberEditText"
+                android:hint="@string/enter_invoice_InvoiceNumberHint"
                 android:textColorHint="@color/hintText"
                 android:layout_column="1"
                 android:layout_marginLeft="50dp"
-                android:inputType="text" />
+                android:inputType="number" />
         </TableRow>
 
         <TableRow
@@ -104,8 +109,8 @@ the use of the Add Invoice button.-->
                 style="@style/AppText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView5"
-                android:text="@string/invoice_title_paid"
+                android:id="@+id/enter_invoice_InvoiceAmountPaidTitle"
+                android:text="@string/enter_invoice_InvoiceAmountPaid"
                 android:layout_marginBottom="10dp" />
 
             <EditText
@@ -114,8 +119,8 @@ the use of the Add Invoice button.-->
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal"
                 android:ems="10"
-                android:id="@+id/amountPaidEditText"
-                android:hint="@string/invoice_amount_hint"
+                android:id="@+id/enter_invoice_AmountPaidEditText"
+                android:hint="@string/enter_invoice_AmountHint"
                 android:textColorHint="@color/hintText"
                 android:layout_marginLeft="50dp"
                 android:layout_column="1" />
@@ -137,20 +142,12 @@ the use of the Add Invoice button.-->
             android:background="@drawable/buttonshape"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/add_invoice_button_text"
+            android:text="@string/enter_invoice_AddInvoiceButtonText"
             android:textAllCaps="false"
-            android:id="@+id/addInvoiceButton"
+            android:id="@+id/enter_invoice_AddInvoiceButton"
             android:layout_marginRight="5dp" />
 
         <!--This button has no functionality at this time but will in the future.-->
-        <Button
-            style="@style/AppText"
-            android:background="@drawable/buttonshape"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/remove_invoice_button_text"
-            android:textAllCaps="false"
-            android:id="@+id/removeInvoiceButton"/>
     </LinearLayout>
 
     <LinearLayout
@@ -164,9 +161,9 @@ the use of the Add Invoice button.-->
             android:background="@drawable/buttonshape"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/viewAllInvoices"
+            android:text="@string/enter_invoice_viewAllInvoicesButtonText"
             android:textAllCaps="false"
-            android:id="@+id/viewAllInvoicesButton"/>
+            android:id="@+id/enter_invoice_ViewAllInvoicesButton"/>
     </LinearLayout>
 
 </LinearLayout>

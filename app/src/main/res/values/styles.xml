@@ -16,25 +16,26 @@
         <item name="android:textSize">20sp</item>
     </style>
 
-    <style name="DefaultFont">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/textDefault</item>
-        <item name="android:textSize">20sp</item>
-    </style>
-
-    <style name="SmallFont">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/textDefault</item>
-        <item name="android:textSize">12sp</item>
-    </style>
-
-    <style name="MediumFont">
+    <!--Created for the CalendarDetails View-->
+    <style name="CalendarListDate">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/textDefault</item>
         <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--Created for the calendar_list_row Titles-->
+    <style name="CalendarDetails">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/textDefault</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- Created this style for the Animation displayed on Activity InvoiceList-->
+    <style name="Fade">
+        <item name="android:windowEnterAnimation">@anim/fadein</item>
+        <item name="android:windowExitAnimation">@anim/fadeout</item>
     </style>
 
 </resources>

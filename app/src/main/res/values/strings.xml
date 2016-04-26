@@ -1,42 +1,63 @@
 <resources>
-    <string name="app_name">Bill Reminder</string>
-    <string name="calendar_text">Calendar Editor</string>
-    <string name="calendar_view_button">View Calendar</string>
-    <string name="add_calendar_event">Add Bill Reminder</string>
-    <string name="test_hint">This is a Hint</string>
-    <string name="Settings">Settings</string>
-    <string name="menu_help">Help</string>
-    <string name="menu_font_size">Font Size</string>
-    <string name="menu_select_date">Select Date</string>
-    <string name="invoice_title_name">Company Name</string>
-    <string name="invoice_title_date">Paid date</string>
-    <string name="invoice_title_number">Invoice Number</string>
-    <string name="invoice_title_paid">Amount paid</string>
-    <string name="invoice_company_name_hint">ex: Verizon</string>
-    <string name="invoice_Date_hint">ex: 5/3/15</string>
-    <string name="invoice_number_hint">ex: 3333333333</string>
-    <string name="invoice_amount_hint">ex: 140.45</string>
-    <string name="welcome_message">Thank you for Choosing Bill Reminder! \n\nThis app allows you
-    to view your calendar and edit bill reminders as well as keeping track of past bill invoices.</string>
-    <string name="calendar_home_button">Calendar</string>
-    <string name="invoices">Invoices</string>
-    <string name="companyTitle">Company:</string>
-    <string name="datePaidTitle">Date Paid:</string>
-    <string name="amountPaidTitle">Amount Paid:</string>
-    <string name="invoiceNumberTitle">Invoice Number:</string>
-    <string name="viewAllInvoices">View All Invoices</string>
-    <string name="add_invoice_button_text">Add Invoice</string>
-    <string name="remove_invoice_button_text">Remove Invoice</string>
-    <string name="Add_Invoice_Menu">Add Invoice</string>
+
+    <string name="app_name">Bill Ping</string>
+
+    <!--All Menu Strings-->
+    <string name="menus">Menu</string>
+    <string name="menus_Reminders">Reminders</string>
+    <string name="menus_Invoices">Invoices</string>
+    <string name="mainMenu_User">Preferences</string>
+    <string name="menus_Delete">Delete</string>
+    <string name="menus_Update">Update</string>
+    <string name="menus_Home">Home</string>
+    <string name="calendar_menu_AddReminder">Add Reminder</string>
+    <string name="calendar_menu_ViewCalendar">View Calendar</string>
+    <string name="invoice_menu_AddInvoice">Add Invoice</string>
+
+    <!--welcome.XML Strings-->
+    <string name="welcome_message">Thank you for Choosing Bill Ping! \n\nThis app allows you
+    to view a list of all your invoices and calendar events. Each page within the app has different
+    menu options allowing you to add, update, and delete invoices and reminders.</string>
     <string name="WelcomeButton">Begin</string>
-    <string name="Remove_Invoice_Menu">Remove Invoice</string>
-    <string name="click_to_delete">Click to Delete</string>
-    <string name="DeleteInvoiceHint">Enter Invoice Number..</string>
+
+    <!--Login.XML Strings-->
+    <string name="login_Welcome">Welcome to Bill Ping Please enter your name.</string>
+    <string name="login_Hint">Enter your name Here</string>
+    <string name="login_button">Save Name</string>
+
+    <!--Calendar_home.xml and calendar_list_row.xml Strings-->
+    <string name="Separator">Separator</string>
+    <!--^^Also used in invoice_list as the separator-->
+    <string name="calendar_list_row_hyphen"> \u0020-\u0020 </string>
+
+    <!--enter_invoice.xml Strings-->
+    <string name="enter_invoice_InvoiceCompanyName">Company Name</string>
+    <string name="enter_invoice_CompanyNameHint">ex: Verizon</string>
+    <string name="enter_invoice_DatePaid">Paid date</string>
+    <string name="enter_invoice_DateHint">Click for Date</string>
+    <string name="enter_invoice_InvoiceNumber">Invoice Number</string>
+    <string name="enter_invoice_InvoiceNumberHint">ex: 25004</string>
+    <string name="enter_invoice_InvoiceAmountPaid">Amount paid</string>
+    <string name="enter_invoice_AmountHint">ex: 140.45</string>
+    <string name="enter_invoice_AddInvoiceButtonText">Add Invoice</string>
+    <string name="enter_invoice_viewAllInvoicesButtonText">View All Invoices</string>
+
+    <!--invoice_detail_view.xml Strings-->
     <string name="detailCompanyTitle">Company:</string>
     <string name="detailDatePaidTitle">Date Paid:</string>
     <string name="detailPaidAmountTitle">Amound paid:</string>
     <string name="detailInvoiceNumberTitle">Invoice Number:</string>
-    <string name="detailMessage">Invoice Details:</string>
-    <string name="menuMainAddBill">Add Reminder</string>
-    <string name="menuMainViewCalendar">View Calendar</string>
+    <string name="invoice_detail_view_Message">Invoice Details:</string>
+
+    <!--invoice_list_row.xml Strings-->
+    <string name="invoice_list_row_CompanyTitle">Company:</string>
+    <string name="invoice_list_row_DatePaidTitle">Date Paid:</string>
+    <string name="invoice_list_row_AmountPaidTitle">Amount Paid:</string>
+    <string name="invoice_list_row_InvoiceNumberTitle">Invoice Number:</string>
+
+    <!--reminder_detail_view.xml Strings-->
+    <string name="reminder_detail_view_StartTimeTitle">Start Time: \u0020</string>
+    <string name="reminder_detail_view_EndTimeTitle">End Time: \u0020</string>
+    <string name="reminder_detail_view_DescriptionText">Description:</string>
+
 </resources>

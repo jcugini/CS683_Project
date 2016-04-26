@@ -33,6 +33,20 @@ public class invoiceList extends AppCompatActivity{
     private TextView resultText;
 
     @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        //Created animation that starts the activity by pushing in from the left and out to the right
+        getWindow().getAttributes().windowAnimations = R.style.Fade;
+        setContentView(R.layout.invoice_list);
+
+        listView = (ListView) findViewById(R.id.invoiceList);
+        registerForContextMenu(listView);
+        refreshData();
+
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.invoice_menu, menu);
         return true;
@@ -46,19 +60,18 @@ public class invoiceList extends AppCompatActivity{
                 startActivity(intentForSwitchEnterInvoice);
                 return true;
 
+            case R.id.invoiceToHome:
+                final Intent intentToHome = new Intent(this, MainActivity.class);
+                startActivity(intentToHome);
+                return true;
+
+            case R.id.invoiceShowReminders:
+                final Intent intentToReminders = new Intent(this, CalendarHome.class);
+                startActivity(intentToReminders);
+                return true;
+
             default: return super.onOptionsItemSelected(item);
         }
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.invoice_list);
-
-        listView = (ListView) findViewById(R.id.invoiceList);
-        registerForContextMenu(listView);
-        refreshData();
-
     }
 
     private void refreshData() {
@@ -151,7 +164,8 @@ public class invoiceList extends AppCompatActivity{
             holder.paid.setText(holder.myInvoice.getAmountPaid());
             holder.invoiceNumber.setText(holder.myInvoice.getInvoiceNumber());
 
-            //Adding for Click Event in listView item
+            //Adding for Click Event in listView item. On clicking the company name, view changes
+            //to invoice details for better view and delete option.
             final ViewHolder finalHolder = holder;
             holder.company.setOnClickListener(new View.OnClickListener() {
                 @Override

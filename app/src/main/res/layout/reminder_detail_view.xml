@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <!--This Layout file is created to display the reminder details in a more easily readable view-->
+
+    <TextView
+        style="@style/AppText"
+        android:id="@+id/rDetailTitle"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        style="@style/CalendarDetails"
+        android:id="@+id/rDetailDateStartText"
+        android:text="@string/reminder_detail_view_StartTimeTitle"
+        android:layout_below="@+id/rDetailTitle"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        style="@style/CalendarDetails"
+        android:id="@+id/rDetailDateStart"
+        android:layout_toRightOf="@+id/rDetailDateStartText"
+        android:layout_alignTop="@+id/rDetailDateStartText"/>
+
+    <TextView
+        style="@style/CalendarDetails"
+        android:id="@+id/rDetailDateEndText"
+        android:text="@string/reminder_detail_view_EndTimeTitle"
+        android:layout_below="@+id/rDetailDateStart"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        style="@style/CalendarDetails"
+        android:id="@+id/rDetailDateEnd"
+        android:layout_toRightOf="@+id/rDetailDateEndText"
+        android:layout_alignTop="@+id/rDetailDateEndText"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rDetailScrollView"
+        android:layout_below="@+id/textView">
+
+        <TextView
+            style="@style/CalendarDetails"
+            android:id="@+id/rDetailDescription"
+            android:layout_marginBottom="146dp" />
+    </ScrollView>
+
+    <TextView
+        style="@style/CalendarDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reminder_detail_view_DescriptionText"
+        android:id="@+id/textView"
+        android:layout_below="@+id/rDetailDateEndText"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

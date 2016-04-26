@@ -5,11 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.database.sqlite.SQLiteQuery;
-import android.nfc.Tag;
-import android.util.Log;
-import android.widget.Toast;
-
 import java.util.ArrayList;
 
 public class InvoiceDBHelper extends SQLiteOpenHelper {
@@ -54,9 +49,7 @@ public class InvoiceDBHelper extends SQLiteOpenHelper {
     //Adds data values to the sqlite database using the get methods laid out in the InvoiceHome.java
     //class. The values are then inserted into the database table.
     public String addInvoiceError;
-    public String getAddInvoiceError() {
-        return addInvoiceError;
-    }
+    public String getAddInvoiceError() {return addInvoiceError;}
     public void setAddInvoiceError(String addInvoiceError) {this.addInvoiceError = addInvoiceError;}
 
     public void addInvoices(InvoiceHome invoice) {
@@ -78,6 +71,34 @@ public class InvoiceDBHelper extends SQLiteOpenHelper {
             setAddInvoiceError("Successfully Added Invoice Number " + invoice.getInvoiceNumber());
         } catch (Exception Error) {
             setAddInvoiceError("Invoice Number " + invoice.getInvoiceNumber() + " Already Exists!");
+        } finally {
+            db.close();
+        }
+    }
+
+    //Created to pass the Update Toast Success message to the invoice list after updating.
+    public String updateInvoiceError;
+    public String getUpdateInvoiceError() {return updateInvoiceError;}
+    public void setUpdateInvoiceError(String updateInvoiceError) {this.updateInvoiceError = updateInvoiceError;}
+    public void updateInvoice(InvoiceHome invoice) {
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        try {
+            ContentValues values = new ContentValues();
+
+            values.put(Company_Name, invoice.getCompanyName());
+            values.put(Paid_Date, invoice.getPaidDate());
+            values.put(Amount_Paid, invoice.getAmountPaid());
+            values.put(Primary_Key, invoice.getInvoiceNumber());
+
+            /*Updated this section to insertOrThrow to display an error message if the invoice
+            number already exists in the table. The default value is "Added Invoice Successfully".
+            If the invoiceNumber exists already, then the catch error will display in the toast.
+             */
+
+            db.replace(Invoice_Table, null, values);
+            setUpdateInvoiceError("Successfully Updated Invoice Number " + invoice.getInvoiceNumber());
         } finally {
             db.close();
         }
@@ -111,6 +132,7 @@ public class InvoiceDBHelper extends SQLiteOpenHelper {
             } while (cursor.moveToNext());
         }
 
+        cursor.close();
         return allInvoices;
     }
 

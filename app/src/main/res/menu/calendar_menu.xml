@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--Menu for calendarView where user can choose to add reminder, view calendar, view invoice list,
+    or go back to the home screen.-->
+
+    <item android:id="@+id/mainMenuMenu"
+        android:title="@string/menus"
+        android:orderInCategory="1"
+        app:showAsAction="ifRoom">
+
+        <menu>
+
+            <item android:id="@+id/addBillReminder"
+                android:title="@string/calendar_menu_AddReminder"
+                android:orderInCategory="1"
+                app:showAsAction="never"/>
+
+            <item android:id="@+id/ViewCalendar"
+                android:title="@string/calendar_menu_ViewCalendar"
+                android:orderInCategory="2"
+                app:showAsAction="never" />
+
+            <item android:id="@+id/calendarToInvoices"
+                android:title="@string/menus_Invoices"
+                android:orderInCategory="3"
+                app:showAsAction="never"/>
+
+            <item android:id="@+id/calendarToHome"
+                android:title="@string/menus_Home"
+                android:orderInCategory="4"
+                app:showAsAction="never"/>
+            </menu>
+
+    </item>
+
+</menu>

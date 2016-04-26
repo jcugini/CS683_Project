@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--This layout file is for the invoice list view invoked by the invoiceList class.-->
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/invoiceLv">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/separator_line"
+            android:contentDescription="@string/Separator" />
+    </LinearLayout>
 
     <ListView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="wrap_content"
@@ -10,7 +26,8 @@
         android:id="@+id/invoiceList"
         android:dividerHeight="1dp"
         android:divider="@color/colorPrimaryDark"
-        android:background="@color/colorPrimary">
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/invoiceLv">
     </ListView>
 
 </RelativeLayout>

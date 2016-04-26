@@ -10,7 +10,7 @@
     <TextView
         style="@style/AppText"
         android:id="@+id/companyTitle"
-        android:text="@string/companyTitle"
+        android:text="@string/invoice_list_row_CompanyTitle"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
         android:layout_width="wrap_content"
@@ -26,7 +26,7 @@
     <TextView
         style="@style/AppText"
         android:id="@+id/paidDateTitle"
-        android:text="@string/datePaidTitle"
+        android:text="@string/invoice_list_row_DatePaidTitle"
         android:layout_marginLeft="5dp"
         android:layout_below="@id/rowCompanyName"/>
 
@@ -41,7 +41,7 @@
     <TextView
         style="@style/AppText"
         android:id="@+id/amountPaidTitle"
-        android:text="@string/amountPaidTitle"
+        android:text="@string/invoice_list_row_AmountPaidTitle"
         android:layout_marginLeft="5dp"
         android:layout_below="@id/rowPaidDate"/>
 
@@ -56,7 +56,7 @@
     <TextView
         style="@style/AppText"
         android:id="@+id/invoiceNumberTitle"
-        android:text="@string/invoiceNumberTitle"
+        android:text="@string/invoice_list_row_InvoiceNumberTitle"
         android:layout_marginLeft="5dp"
         android:layout_below="@id/rowAmountPaid"/>
 

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- This drawable is used as a separator between the menu bar and the list views for both
+    reminders and invoices.-->
+
+    <solid android:color="@color/colorPrimaryDark"/>
+    <size android:height="5dp"/>
+
+</shape>

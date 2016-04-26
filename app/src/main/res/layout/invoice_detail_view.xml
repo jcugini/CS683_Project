@@ -9,7 +9,7 @@
         style="@style/AppText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/detailMessage"
+        android:text="@string/invoice_detail_view_Message"
         android:id="@+id/detailMessage"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -27,15 +27,15 @@
         android:layout_toStartOf="@+id/detailMessage"
         android:layout_marginStart="20dp"/>
 
-    <TextView
+    <EditText
         style="@style/AppText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Test"
         android:id="@+id/detailCompanyName"
         android:layout_alignTop="@+id/detailCompanyTitle"
         android:layout_toEndOf="@+id/detailInvoiceNumberTitle"
-        android:layout_marginLeft="20dp" />
+        android:layout_marginLeft="20dp"
+        android:inputType="text"/>
 
     <!--Line 2 TextViews-->
     <TextView
@@ -48,14 +48,15 @@
         android:layout_alignStart="@+id/detailCompanyTitle"
         android:layout_marginTop="20dp" />
 
-    <TextView
+    <EditText
         style="@style/AppText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Test2"
         android:id="@+id/detailPaidDate"
         android:layout_alignTop="@+id/detailDatePaidTitle"
-        android:layout_alignStart="@+id/detailCompanyName" />
+        android:layout_alignStart="@+id/detailCompanyName"
+        android:focusable="false"
+        android:inputType="date"/>
 
     <!--Line 3 Text Views-->
     <TextView
@@ -68,16 +69,15 @@
         android:layout_alignStart="@+id/detailDatePaidTitle"
         android:layout_marginTop="20dp" />
 
-    <TextView
+    <EditText
         style="@style/AppText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Test 3"
         android:id="@+id/detailAmountPaid"
         android:layout_alignTop="@+id/detailPaidAmountTitle"
         android:layout_alignStart="@+id/detailPaidDate" />
 
-<!--Line 4 Text Viws-->
+<!--Line 4 Text Views-->
     <TextView
         style="@style/AppText"
         android:layout_width="wrap_content"
@@ -92,18 +92,8 @@
         style="@style/AppText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Test 4"
         android:id="@+id/detailInvoiceNumber"
         android:layout_alignTop="@+id/detailInvoiceNumberTitle"
         android:layout_alignStart="@+id/detailAmountPaid" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Delete"
-        android:id="@+id/DeleteButton"
-        android:layout_below="@+id/detailInvoiceNumberTitle"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp" />
 
 </RelativeLayout>

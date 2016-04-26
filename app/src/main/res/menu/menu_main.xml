@@ -4,17 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity">
 
-    <!--When this project was originally created, I had chosen No_activity so I had to manually
-    re-create the menu options. I added a few list items as layed out in Mod2 but they do not have
-    any functionality yet.-->
+    <!--Created a sub-menu on all my menu items in order to start with "Menu" for a better display
+    effect.From the home page, users will be able to navigate to the Reminders, Invoices, and
+    username Pages by clicking on the below menu items-->
 
-    <item android:id="@+id/addBillReminder"
-        android:title="@string/menuMainAddBill"
+    <item android:id="@+id/mainMenuMenu"
+        android:title="@string/menus"
         android:orderInCategory="1"
-        app:showAsAction="never"/>
+        app:showAsAction="ifRoom">
 
-    <item android:id="@+id/ViewCalendar"
-        android:title="@string/menuMainViewCalendar"
-        android:orderInCategory="2"
-        app:showAsAction="never" />
+        <menu>
+
+            <item android:id="@+id/menu_main_ViewCalendarEvents"
+                android:title="@string/menus_Reminders"
+                android:orderInCategory="1"
+                app:showAsAction="never"/>
+
+            <item android:id="@+id/menu_main_ViewInvoices"
+                android:title="@string/menus_Invoices"
+                android:orderInCategory="2"
+                app:showAsAction="never"/>
+
+            <item android:id="@+id/menu_main_UpdateUserName"
+                android:title="@string/mainMenu_User"
+                android:orderInCategory="3"
+                app:showAsAction="never"/>
+        </menu>
+
+    </item>
+
 </menu>

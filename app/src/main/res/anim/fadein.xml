@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Animation Files taken from: http://forum.xda-developers.com/showthread.php?t=2331728
+animation is implemented in the invoiceList.java class upon invoking the class.-->
+
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <translate android:fromXDelta="100%p" android:toXDelta="0" android:duration="300"/>
+    <alpha android:fromAlpha="0.0" android:toAlpha="1.0" android:duration="300" />
+</set>

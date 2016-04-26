@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--This layout file defines the row style for the calendar_home list view.-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        style="@style/AppText"
+        android:id="@+id/rowReminderTitle"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        style="@style/CalendarListDate"
+        android:id="@+id/rowDateStart"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@id/rowReminderTitle"/>
+
+    <TextView
+        style="@style/CalendarListDate"
+        android:id="@+id/rowDateSeparator"
+        android:text="@string/calendar_list_row_hyphen"
+        android:layout_alignTop="@+id/rowDateStart"
+        android:layout_toRightOf="@+id/rowDateStart"/>
+
+    <TextView
+        style="@style/CalendarListDate"
+        android:id="@+id/rowDateEnd"
+        android:layout_alignTop="@+id/rowDateStart"
+        android:layout_toRightOf="@+id/rowDateSeparator"/>
+</RelativeLayout>

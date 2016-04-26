@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--This layout file is the one used by MainActivity the first time the user opens the app.
+this is also used if the user selects "preferences" from the welcome main screen.-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        style="@style/AppText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_Welcome"
+        android:id="@+id/login_message"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" />
+
+    <EditText
+        style="@style/AppText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/login_userNameEdit"
+        android:layout_below="@+id/login_message"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:width="300dp"
+        android:hint="@string/login_Hint"
+        android:textColorHint="@color/hintText"
+        android:inputType="text"/>
+
+    <Button
+        style="@style/AppText"
+        android:textAllCaps="false"
+        android:background="@drawable/buttonshape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_button"
+        android:id="@+id/login_saveName"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

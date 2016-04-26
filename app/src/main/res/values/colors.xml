@@ -6,4 +6,5 @@
     <color name="textDefault">#FFFFFF</color>
     <color name="hintText">#FF969A9E</color>
     <color name="buttonColor">#FF8A8A8B</color>
+    <color name="calendarBack">#000000</color>
 </resources>
